@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet " href="css/Course.css ">
+</head>
+
+<body>
+
+    <h1 id="courseTitle ">Course Titles</h1>
+    <p class="courseDesc ">Learn Course to build Your Skills</p>
+    <hr>
+    <div class="COURSE">
+        <!--COURSE C-->
+        <div class="Course1">
+            <h3>C-PROGRAMMING</h3>
+            <p class="meta1">From C You can learn</p>
+            <div class="progress">
+                <div id="bar1" class="bar1" style="width: 20%"></div>
+            </div>
+            <p class="N">CHAPTER-1 "Variables & Datatypes"</P>
+            <b>
+                <p class="statusinprogress">Currently in progression</p>
+            </b>
+            <button id="Continuebtn" onclick="open1()">Continue</button>
+            <P class="M">CHAPTER-TWO "Operators"</P>
+            <b>
+                <p class="statuscurrentlylocked">Locked</p>
+            </b>
+            <button id="Continuebtn" onclick="open2()">Continue</button>
+            <p class="K">CHAPTER-THREE "Control Statements"</p>
+            <b>
+                <p class="statuslocked">Complete Previous Chapters</p>
+            </b>
+            <button id="Continuebtn" onclick="open3()">Continue</button>
+
+        </div>
+        <!--COURSE PYTHON-->
+        <div class="Course2">
+            <h3>PYTHON-PROGRAMMING</h3>
+            <P class="meta2">From Python You can Learn</P>
+            <div class="listpython">
+                <div id="bar2" class="bar2" style="width: 75%"></div>
+            </div>
+            <p class="N">CHAPTER-ONE "Syntax & Variables"</p>
+            <b>
+                <p class="statusinprogress">Currently in progression</p>
+            </b>
+            <button onclick="openP1()">Continue</button>
+            <p class="M">CHAPTER-TWO "Loops Concept"</p>
+            <b>
+                <p class="statuscurrentlylocked">Locked</p>
+            </b>
+            <button onclick="openP2()">Continue</button>
+            <p class="K">CHAPTER-THREE "Functions"</p>
+            <b>
+                <p class="statuslocked">Complete Previous Chapters</p>
+            </b>
+            <button onclick="openP3()">Continue</button>
+
+        </div>
+        <!--COURSE JAVA-->
+        <div class="Course3">
+            <h3>JAVA PROGRAMMING</h3>
+            <p class="meta3">From Java you can learn</p>
+            <div class="listjava">
+                <div id="bar3" class="bar3" style="width: 60%"></div>
+            </div>
+            <p class="N">CHAPTER-ONE "OOP Basics"</p>
+            <b>
+                <p class="statusinprogress">Currently in progression</p>
+            </b>
+            <button onclick="openJ1()">Continue</button>
+            <p class="M">CHAPTER-TWO "Classes & Objects"</p>
+            <b>
+                <p class="statuscurrentlylocked">Locked</p>
+            </b>
+            <button onclick="openJ2()">Continue</button>
+            <P class="K">CHAPTER-THREE "Inheritance"</P>
+            <b>
+                <p class="statuslocked">Complete Previous Chapters</p>
+            </b>
+            <button onclick="openJ3()">Continue</button>
+        </div>
+
+
+    </div>
+    <script>
+        function open1() {
+            const bar = document.getElementById("bar1");
+            let progress = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (progress == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (progress >= 0) {
+                window.location.href = "codeC1.html";
+            } else {
+                alert("You need to complete at least 20% of the progression")
+            }
+
+        }
+
+        function open2() {
+            const bar = document.getElementById("bar1");
+            let progress = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (progress == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (progress >= 45) {
+                window.location.href = "codeC2.html";
+            } else {
+                alert("You need to complete at least 45% of the progression")
+            }
+
+        }
+
+        function open3() {
+            const bar = document.getElementById("bar1");
+            let progress = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (progress == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (progress >= 70) {
+                window.location.href = "codeC3.html";
+            } else {
+                alert("You need to complete at least 70% of the progression")
+            }
+
+        }
+
+        function openP1() {
+            const bar = document.getElementById("bar2");
+            let listpython = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (listpython == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (listpython >= 20) {
+                window.location.href = "codepython1.html";
+            } else {
+                alert("You need to complete at least 20% of the progression")
+            }
+
+        }
+
+        function openP2() {
+            const bar = document.getElementById("bar2");
+            let listpython = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (listpython == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (listpython >= 45) {
+                window.location.href = "codepython2.html";
+            } else {
+                alert("You need to complete at least 45% of the progression")
+            }
+
+        }
+
+        function openP3() {
+            const bar = document.getElementById("bar2");
+            let listpython = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (listpython == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (listpython >= 70) {
+                window.location.href = "codepython3.html";
+            } else {
+                alert("You need to complete at least 70% of the progression")
+            }
+
+        }
+
+        function openJ1() {
+            const bar = document.getElementById("bar3");
+            let listjava = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (listjava == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (listjava >= 20) {
+                window.location.href = "codejava1.html";
+            } else {
+                alert("You need to complete at least 20% of the progression")
+            }
+
+        }
+
+        function openJ2() {
+            const bar = document.getElementById("bar3");
+            let listjava = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (listjava == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (listjava >= 45) {
+                window.location.href = "codejava2.html";
+            } else {
+                alert("You need to complete at least 45% of the progression")
+            }
+
+        }
+
+        function openJ3() {
+            const bar = document.getElementById("bar3");
+            let listjava = parseInt(bar.style.width);
+
+            const button = document.getElementById("Continuebtn");
+            if (listjava == 100) {
+                button.innerText = "Completed"
+                button.disabled = true;
+            } else if (listjava >= 70) {
+                window.location.href = "codejava3.html";
+            } else {
+                alert("You need to complete at least 70% of the progression")
+            }
+
+        }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <div class="profile-page">
+
+        <!-- HERO -->
+        <section class="profile-hero-pro">
+            <div class="hero-left">
+                <div class="avatar-pro">
+                    ${getInitials(user.name)}
+                </div>
+
+                <div class="hero-info">
+                    <h2>${user.name}</h2>
+                    <p class="hero-sub">${user.dept.toUpperCase()} · Year ${user.year}</p>
+                    <span class="hero-title">${learnerTitle}</span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="hero-stat">
+                    <h3>${credits}</h3>
+                    <p>Credits</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>${accuracy}%</h3>
+                    <p>Accuracy</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>${certs.length}</h3>
+                    <p>Certificates</p>
+                </div>
+            </div>
+
+            <div class="hero-glow"></div>
+        </section>
+
+        <!-- GRID -->
+        <section class="profile-grid">
+
+            <!-- LEFT COLUMN -->
+            <div class="profile-col">
+
+                <!-- Progress -->
+                <div class="pro-card">
+                    <div class="card-head">
+                        <h3>📈 Skill Progress</h3>
+                        <span class="mini-tag">Live</span>
+                    </div>
+
+                    <div class="skill-progress">
+                        <div class="skill-row">
+                            <div class="skill-left">
+                                <b>🧠 Aptitude</b>
+                                <span>${aptAcc}% accuracy</span>
+                            </div>
+                            <div class="bar">
+                                <div class="fill aptitude" style="width:${aptProgress}%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-row">
+                            <div class="skill-left">
+                                <b>💻 DSA</b>
+                                <span>${dsaAcc}% accuracy</span>
+                            </div>
+                            <div class="bar">
+                                <div class="fill dsa" style="width: ${dsaProgress} %"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-actions">
+                        <button class="pro-btn" onclick="navigate('training')">Start Training</button>
+                        <button class="pro-btn-outline" onclick="navigate('certificates')">View Certificates</button>
+                    </div>
+                </div>
+
+                <!-- Weekly Heatmap -->
+                <div class="pro-card">
+                    <div class="card-head">
+                        <h3>🗓 Weekly Activity</h3>
+                        <span class="mini-tag">7 Days</span>
+                    </div>
+
+                    <div class="heatmap">
+                        ${generateHeatmapBlocks()}
+                    </div>
+
+                    <p class="heatmap-note">
+                        Workout streak increases your consistency score 🔥
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="profile-col">
+
+                <!-- Badges -->
+                <div class="pro-card">
+                    <div class="card-head">
+                        <h3>🏅 Badges</h3>
+                        <span class="mini-tag">${badges.length}</span>
+                    </div>
+
+                    <div class="badge-grid">
+                        ${ badges.length ? badges.map(b => `
+                        <div class="badge-pro">${b}</div>`).join("") : `
+                        <p class="muted">No badges yet. Start workout mode 🔥</p>` }
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="pro-card">
+                    <div class="card-head">
+                        <h3>⚡ Recent Activity</h3>
+                        <span class="mini-tag">${total}</span>
+                    </div>
+
+                    <div class="activity-list">
+                        ${renderRecentAttempts(attempts)}
+                    </div>
+                </div>
+
+                <!-- Motivation Quote -->
+                <div class="pro-card quote-card">
+                    <div class="card-head">
+                        <h3>💬 Motivation</h3>
+                        <button class="mini-refresh" onclick="manualQuoteChange()">↻</button>
+                    </div>
+
+                    <p class="quote-text" id="quoteText">
+                        Loading motivation...
+                    </p>
+
+                    <p class="quote-sub">
+                        Keep doing workouts daily to unlock certificates faster ✅
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>
