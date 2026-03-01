@@ -1,0 +1,166 @@
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                
+                body {
+                    font-family: "Segoe UI", sans-serif;
+                    background: #0f172a;
+                    color: #e5e7eb;
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                }
+                /* TOP BAR */
+                
+                .topbar {
+                    height: 55px;
+                    background: #111827;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 25px;
+                    border-bottom: 1px solid #1f2937;
+                }
+                
+                .brand {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                
+                .actions select,
+                .actions button {
+                    margin-left: 10px;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    border: none;
+                    background: #1f2937;
+                    color: white;
+                    cursor: pointer;
+                }
+                
+                .run {
+                    margin-left: 10px;
+                    padding: 6px 12px;
+                    border-radius: 6px;
+                    border: none;
+                    background: #1f2937;
+                    color: white;
+                    cursor: pointer;
+                    background: #16a34a;
+                }
+                
+                .actions button.submit {
+                    background: #2563eb;
+                }
+                /* MAIN CONTAINER */
+                
+                .container {
+                    display: flex;
+                    flex: 1;
+                    overflow: hidden;
+                }
+                /* SIDEBAR */
+                
+                .sidebar {
+                    width: 220px;
+                    background: #111827;
+                    padding: 20px;
+                    border-right: 1px solid #1f2937;
+                }
+                
+                .menu-title {
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    color: #9ca3af;
+                }
+                
+                .menu-item {
+                    padding: 10px 12px;
+                    border-radius: 6px;
+                    margin-bottom: 8px;
+                    cursor: pointer;
+                }
+                
+                .menu-item.active,
+                .menu-item:hover {
+                    background: #1f2937;
+                }
+                /* CONTENT */
+                
+                .content {
+                    display: flex;
+                    flex: 1;
+                }
+                /* PROBLEM PANEL */
+                
+                .problem-panel {
+                    width: 35%;
+                    padding: 25px;
+                    border-right: 1px solid #1f2937;
+                    overflow-y: auto;
+                }
+                
+                .problem-panel h2 {
+                    margin-bottom: 15px;
+                }
+                
+                .problem-panel pre {
+                    background: #1f2937;
+                    padding: 10px;
+                    border-radius: 6px;
+                    margin-top: 5px;
+                }
+                /* EDITOR SECTION */
+                
+                .editor-section {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                }
+                /* EDITOR HEADER */
+                
+                .editor-header {
+                    padding: 12px 20px;
+                    background: #111827;
+                    border-bottom: 1px solid #1f2937;
+                }
+                /* MONACO EDITOR */
+                
+                #editor {
+                    height: 60%;
+                }
+                /* OUTPUT BELOW EDITOR */
+                
+                .output-section {
+                    height: 40%;
+                    background: #111827;
+                    border-top: 1px solid #1f2937;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .output-header {
+                    padding: 10px 20px;
+                    font-weight: 600;
+                }
+                
+                #output {
+                    flex: 1;
+                    padding: 15px 20px;
+                    font-family: monospace;
+                    overflow-y: auto;
+                    color: #22c55e;
+                }
+                
+                .output-Spilt {
+                    height: 55px;
+                    background: #111827;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 25px;
+                    border-bottom: 1px solid #1f2937;
+                }
